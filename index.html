@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css" />
     <link
       rel="stylesheet"
@@ -22,13 +23,13 @@
             <a href="#" class="nav_list__link">About us</a>
           </li>
           <li class="nav_list__item">
-            <a href="#" class="nav_list__link">Projects</a>
+            <a href="#projects" class="nav_list__link">Projects</a>
           </li>
           <li class="nav_list__item">
-            <a href="#" class="nav_list__link">News</a>
+            <a href="#news" class="nav_list__link">News</a>
           </li>
           <li class="nav_list__item">
-            <a href="#" class="nav_list__link">Contacts</a>
+            <a href="#contact" class="nav_list__link">Contacts</a>
           </li>
         </ul>
         <div class="social">
@@ -63,7 +64,7 @@
           </ul>
         </div>
       </nav>
-      <button class="btn_down">></button>
+      <button class="btn_down" id="scrollButton">></button>
     </header>
     <main class="main">
       <section class="slider">
@@ -133,7 +134,7 @@
           />
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="projects">
         <h2 class="title">What we do</h2>
         <article class="projects">
           <div class="projects_img">
@@ -142,12 +143,12 @@
           <div class="projects_text">
             <h4 class="projects_suptitle">One world</h4>
             <h2 class="title">Trade center</h2>
-            <p class="text">
+            <p class="text" id="textTradeCnt">
               Increasing prosperity in our lives can be accomplished by having
               the right frame of mind. The truth is, our thoughts are very
               powerful.
             </p>
-            <button class="button"><span>More details</span></button>
+            <button class="button" id="seeMoreTradeCnt"><span>More details</span></button>
             <span class="location"
               >New York City, United States - 1776 feet</span
             >
@@ -160,17 +161,17 @@
           <div class="projects_text">
             <h4 class="projects_suptitle">International</h4>
             <h2 class="title">Commerce center</h2>
-            <p class="text">
+            <p class="text" id="textCommCnt">
               Successful businesses have many things in common, today we’ll look
               at the big ‘R’ of recognition and how a digital advertising
               network may help.
             </p>
-            <button class="button"><span>More details</span></button>
+            <button class="button" id="seeMoreCommCnt"><span>More details</span></button>
             <span class="location">Hong Kong - 1588 feet</span>
           </div>
         </article>
       </section>
-      <section class="news_background">
+      <section class="news_background" id="news">
         <h2 class="title">Latest news</h2>
         <article class="slider_news">
           <div class="slide_news">
@@ -312,7 +313,7 @@
       </section>
       <section class="section gallery">
         <h2 class="title">Gallery</h2>
-        <article class="grid">
+        <article class="grid" id="photoContainer">
           <div class="grid_photo g-item__col-dbl__row-dbl">
             <img src="/assets/img/galerry/img_1.png" alt="photo" />
           </div>
@@ -329,10 +330,11 @@
             <img src="/assets/img/galerry/img_5.png" alt="photo" />
           </div>
         </article>
-        <button class="button"><span>See more</span></button>
+        <button class="button" id="addPhotoButton"><span>See more</span></button>
       </section>
-      <section>
+      <section id="contact">
         <iframe
+        id="map"
           class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96835.36811121418!2d-73.8663135278861!3d40.67164978373727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2z0JHRgNGD0LrQu9C40L0sINCd0YzRji3QmdC-0YDQuiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1721246916284!5m2!1sru!2sua"
           width="1600"
@@ -435,11 +437,11 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="/js/_slider.js"></script>
-    <script src="/js/main.js"></script>
     <script src="/js/map_api.js"></script>
     <script
       async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDridkH2g4ZWIkj6HX4j30GkJOdo_76zLA&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDridkH2g4ZWIkj6HX4j30GkJOdo_76zLA&callback"
     ></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

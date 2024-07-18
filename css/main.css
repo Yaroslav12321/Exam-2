@@ -411,6 +411,7 @@ ul li {
 }
 .main .gallery .grid .grid_photo {
   height: 214px;
+  width: 285px;
 }
 .main .gallery .grid .g-item__col-dbl__row-dbl {
   grid-column: span 2;
