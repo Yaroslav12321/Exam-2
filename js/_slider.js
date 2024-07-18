@@ -22,15 +22,25 @@ $(".slider_news").slick({
       breakpoint: 1200,
       settings: {
         slidesToShow: 2,
-        arrows: false
+        arrows: false,
+        centerMode: true
       },
     },
     {
       breakpoint: 992,
       settings: {
         slidesToShow: 1,
+        centerMode: true,
         arrows: false,
       },
     },
-  ],
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        arrows: false,
+      },
+    }
+],
 });

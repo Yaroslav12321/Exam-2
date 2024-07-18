@@ -1,4 +1,7 @@
 'use strict'
+// import { Fancybox } from '@fancyapps/ui';
+// import '@fancyapps/ui/dist/fancybox/fancybox.css';
+
 document.getElementById('scrollButton').addEventListener('click', function() {
     document.getElementById('projects').scrollIntoView({
         behavior: 'smooth'

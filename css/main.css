@@ -1,20 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@media screen and (max-width: 1560px) {
-  .main .projects_img::before {
-    display: none;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .main .projects {
-    flex-wrap: wrap;
-  }
-  .main .projects_text {
-    width: 470px;
-  }
-}
-
 .slider {
   position: relative;
   margin-bottom: 100px;
@@ -183,6 +169,140 @@ button {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 1200px) {
+  .header {
+    max-width: 900px;
+  }
+  .header .nav_list {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    max-width: 800px;
+  }
+  .header .nav {
+    position: relative;
+  }
+  .header .nav_list {
+    padding-left: 30px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    min-width: 300px;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(45, 74, 202, 0.4588235294);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+  .header .burger:checked ~ .nav_list {
+    visibility: visible;
+    opacity: 1;
+  }
+  .header .burger:checked ~ .burger__img {
+    transform: rotate(315deg);
+  }
+  .header .burger:checked ~ .burger__img::before {
+    opacity: 0;
+  }
+  .header .burger:checked ~ .burger__img::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  .header .burger__img {
+    display: inline-block;
+    position: relative;
+    width: 34px;
+    height: 2px;
+    background: #53f3cd;
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+  .header .burger__img::after, .header .burger__img::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: #53f3cd;
+    top: 10px;
+  }
+  .header .burger__img::after {
+    top: -10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main .section {
+    width: 800px;
+  }
+  .main .section > .projects, .main .section ~ .gallery {
+    width: 800px;
+  }
+  .main .projects {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main .projects_text {
+    width: 480px;
+  }
+  .main .slider_news {
+    width: 800px;
+  }
+  .main .gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(214px, 1fr));
+  }
+}
+@media screen and (max-width: 992px) {
+  .main .section ~ .gallery {
+    width: 700px;
+  }
+  .main .gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(214px, 1fr));
+  }
+  .main .gallery .grid .g-item__col-dbl__row-dbl {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .section {
+    width: 700px;
+  }
+  .main .section > .projects, .main .section ~ .gallery {
+    width: 700px;
+  }
+  .main .projects {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main .projects_text {
+    width: 400px;
+  }
+  .main .slider_news {
+    width: 700px;
+  }
+  .main .map ~ .section {
+    width: 700px;
+  }
+  .main .form_info .form .input {
+    width: 280px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -194,7 +314,6 @@ ul li {
 }
 
 .section {
-  width: 1170px;
   margin: 0 auto;
   margin-bottom: 150px;
   position: relative;
@@ -267,6 +386,12 @@ ul li {
   text-align: center;
   color: #fff;
 }
+.header .nav .burger {
+  display: none;
+}
+.header .nav .burger__img {
+  cursor: pointer;
+}
 .header .nav .nav_list__item {
   position: relative;
 }
@@ -325,6 +450,8 @@ ul li {
   background: linear-gradient(45deg, rgb(85, 184, 255) 34%, rgb(126, 90, 255) 80%);
 }
 .main .projects {
+  width: 1170px;
+  margin: 0 auto;
   display: flex;
   gap: 70px;
 }
