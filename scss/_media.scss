@@ -1,17 +1,19 @@
-// .header,
-// .main,
-// .footer {
-//   padding: 0 calc(50vw - $adaptive_width_container);
-
-//   @media screen and (max-width: 1170px) {
-//     padding: 0 calc(50vw - calc($adaptive_width_container - 12%));
-//   }
-
-//   @media screen and (max-width: 992px) {
-//     padding: 0 calc(50vw - calc($adaptive_width_container - 26.5%));
-//   }
-
-//   @media screen and (max-width: 768px) {
-//     padding: 0 15px;
-//   }
-// }
+.main{
+    @media screen and (max-width: 1560px){
+        .projects{
+            &_img{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+}
+    @media screen and (max-width: 1200px){
+        .projects{
+            flex-wrap: wrap;
+            &_text{
+                width: 470px;
+            }
+        }
+}
+}

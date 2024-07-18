@@ -1,8 +1,7 @@
 @import "_vars";
 @import "_mixin";
-@import "_slider";
 @import "_media";
-
+@import "_slider";
 * {
   padding: 0;
   margin: 0;
@@ -37,7 +36,7 @@ ul {
   }
 }
 .title {
-  @include font($main_font, 44px, bold, normal, center, $text_color);
+  @include font($main_font, 43px, bold, normal, center, $text_color);
   text-transform: uppercase;
   padding-top: 30px;
   margin-bottom: 90px;
@@ -104,7 +103,7 @@ ul {
     top: calc(100vh - 150px);
     right: 50%;
     transform: translateX(50%);
-    rotate: 90deg;
+    transform: rotate(90deg);
     width: 40px;
     height: 40px;
   }
@@ -178,6 +177,7 @@ ul {
       margin-bottom: 150px;
       .projects_img {
         &::before {
+          content: '';
           background-color: #7e5aff;
           left: 215px;
         }
