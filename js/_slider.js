@@ -1,7 +1,8 @@
+'use strict'
 $(document).ready(function(){
     $('.slider').slick({
         autoplay: false,
-        autoplaySpeed: 4600,
+        autoplaySpeed: 4000,
         speed: 1600,
         dots: true,
         arrows: false,
@@ -13,7 +14,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.slider_news').slick({
         autoplay: false,
-        autoplaySpeed: 4600,
+        autoplaySpeed: 4000,
         speed: 1600,
         dots: true,
         arrows: true,

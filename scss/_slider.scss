@@ -4,7 +4,18 @@
 }
 .slide {
   position: relative;
-  &__img {
+  &_content {
+    &__title {
+      @include font($main_font, 80px, bold, normal, center, $main_color);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      @include font($main_font, 18px, 400, normal, center, $main_color);
+      letter-spacing: 3px;
+    }
+  }
+  & .img {
     position: relative;
     object-fit: cover;
     height: 100vh;
@@ -19,7 +30,7 @@
     transform: translateX(-50%);
   }
 }
-.slide_background {
+.background {
   background-size: cover;
   &::before {
     content: "";
@@ -66,16 +77,50 @@ button {
   position: relative;
   width: 1170px;
   margin: 0 auto;
-  .slick-dots{
+  .slick-dots {
     flex-direction: row;
     top: 100%;
     right: 50%;
     transform: translateX(50%);
   }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    font-size: 0;
+    border: 2px solid #ffddff;
+    background: #ffddff00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::before {
+        content: "<";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: #fff;
+    }
+}
+.slick-next {
+    right: -120px;
+
+    &::before {
+        content: ">";
+    }
+    
+}
+.slick-prev {
+    left: -120px;
+}
 }
 .slide_news {
   position: relative;
-  width: 370px;
+  width: 371px;
   .news_text {
     background-color: $main_color;
     padding: 30px 20px;
@@ -83,19 +128,19 @@ button {
     .author {
       display: flex;
       gap: 20px;
-        .author_img {
-          border-radius: 50%;
-          object-fit: cover;
+      .author_img {
+        border-radius: 50%;
+        object-fit: cover;
       }
-      &_info{
+      &_info {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .name{
-            @include font($main_font, 18px, 400, normal, start, $text_color);
+        .name {
+          @include font($main_font, 18px, 400, normal, start, $text_color);
         }
-        .date{
-            @include font($main_font, 14px, 400, normal, start, #55B7FF);  
+        .date {
+          @include font($main_font, 14px, 400, normal, start, #55b7ff);
         }
       }
     }
