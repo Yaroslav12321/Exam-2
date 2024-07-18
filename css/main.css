@@ -261,11 +261,13 @@ button {
   .main .gallery .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(214px, 1fr));
   }
 }
 @media screen and (max-width: 992px) {
   .main .section ~ .gallery {
+    width: 700px;
+  }
+  .main .gallery {
     width: 700px;
   }
   .main .gallery .grid {
@@ -274,16 +276,23 @@ button {
     grid-template-rows: repeat(auto-fit, minmax(214px, 1fr));
   }
   .main .gallery .grid .g-item__col-dbl__row-dbl {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-column: span 2;
+    grid-row: span 2;
   }
 }
 @media screen and (max-width: 768px) {
   .main .section {
-    width: 700px;
+    width: 600px;
   }
   .main .section > .projects, .main .section ~ .gallery {
-    width: 700px;
+    width: 600px;
+  }
+  .main .section > .projects .grid, .main .section ~ .gallery .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main .section > .projects .grid .g-item__col-dbl__row-dbl, .main .section ~ .gallery .grid .g-item__col-dbl__row-dbl {
+    grid-column: span 2;
+    grid-row: span 2;
   }
   .main .projects {
     flex-wrap: wrap;
@@ -296,10 +305,17 @@ button {
     width: 700px;
   }
   .main .map ~ .section {
-    width: 700px;
+    max-width: 700px;
   }
   .main .form_info .form .input {
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer_section {
+    width: 700px;
+    margin-top: -50px;
   }
 }
 

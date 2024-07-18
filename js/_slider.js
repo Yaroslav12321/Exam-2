@@ -15,7 +15,7 @@ $(".slider_news").slick({
   dots: true,
   arrows: true,
   infinite: true,
-  swipe: false,
+  swipe: true,
   slidesToShow: 3,
   responsive: [
     {
