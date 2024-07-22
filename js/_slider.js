@@ -17,20 +17,19 @@ $(".slider_news").slick({
   infinite: true,
   swipe: true,
   slidesToShow: 3,
+  slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1230,
       settings: {
         slidesToShow: 2,
         arrows: false,
-        centerMode: true
       },
     },
     {
       breakpoint: 992,
       settings: {
         slidesToShow: 1,
-        centerMode: true,
         arrows: false,
       },
     },
@@ -38,7 +37,6 @@ $(".slider_news").slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        centerMode: true,
         arrows: false,
       },
     }

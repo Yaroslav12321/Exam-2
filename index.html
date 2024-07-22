@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href=".//assets/img/favicon.png" type="image/png">
+    <link
+      rel="shortcut icon"
+      href=".//assets/img/favicon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <title>Monticello</title>
-</head>
+  </head>
   <body>
     <header class="header">
       <nav class="nav">
         <div class="logo">
           <img src="/assets/img/logo.png" alt="Logo" />
         </div>
-        <input type="checkbox" class="burger" id="nav-burger">
+        <input type="checkbox" class="burger" id="nav-burger" />
         <label for="nav-burger" class="burger__img"></label>
         <ul class="nav_list">
           <li class="nav_list__item">
@@ -30,7 +38,7 @@
             <a href="#contact" class="nav_list__link">Contacts</a>
           </li>
         </ul>
-        <div class="social">
+        <nav class="social">
           <ul class="social_list">
             <li class="social_list__item">
               <a href="#" class="social_list__link"
@@ -38,8 +46,9 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#instagram"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="social_list__item">
               <a href="#" class="social_list__link"
@@ -47,8 +56,9 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#twitter"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="social_list__item">
               <a href="#" class="social_list__link"
@@ -56,11 +66,12 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#facebook"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </nav>
       <button class="btn_down" id="scrollButton">></button>
     </header>
@@ -146,7 +157,9 @@
               the right frame of mind. The truth is, our thoughts are very
               powerful.
             </p>
-            <button class="button" id="seeMoreTradeCnt"><span>More details</span></button>
+            <button class="button" id="seeMoreTradeCnt">
+              <span>More details</span>
+            </button>
             <span class="location"
               >New York City, United States - 1776 feet</span
             >
@@ -164,7 +177,9 @@
               at the big ‘R’ of recognition and how a digital advertising
               network may help.
             </p>
-            <button class="button" id="seeMoreCommCnt"><span>More details</span></button>
+            <button class="button" id="seeMoreCommCnt">
+              <span>More details</span>
+            </button>
             <span class="location">Hong Kong - 1588 feet</span>
           </div>
         </article>
@@ -312,37 +327,59 @@
       <section class="section gallery">
         <h2 class="title">Gallery</h2>
         <article class="grid" id="photoContainer">
-          <div class="grid_photo g-item__col-dbl__row-dbl">
-            <a href="/assets/img/galerry/img_1.png" data-fancybox data-caption="Single image">
-              <img src="/assets/img/galerry/img_1.png" />
+          <div class="grid_photo">
+            <a
+              href="/assets/img/galerry/img_1.png"
+              data-fancybox
+              data-caption="Single image"
+            >
+              <img src="/assets/img/galerry/img_1.png" alt="photo"  class="grid_photo g-item__col-dbl__row-dbl"/>
             </a>
           </div>
           <div class="grid_photo">
-            <a href="/assets/img/galerry/img_2.png" data-fancybox data-caption="Single image">
-              <img src="/assets/img/galerry/img_2.png" />
+            <a
+              href="/assets/img/galerry/img_2.png"
+              data-fancybox
+              data-caption="Single image"
+            >
+              <img src="/assets/img/galerry/img_2.png" alt="photo" class="grid_photo"/>
             </a>
           </div>
           <div class="grid_photo">
-            <a href="/assets/img/galerry/img_3.png" data-fancybox data-caption="Single image">
-              <img src="/assets/img/galerry/img_3.png" />
+            <a
+              href="/assets/img/galerry/img_3.png"
+              data-fancybox
+              data-caption="Single image"
+            >
+              <img src="/assets/img/galerry/img_3.png" alt="photo" class="grid_photo"/>
             </a>
           </div>
           <div class="grid_photo">
-            <a href="/assets/img/galerry/img_4.png" data-fancybox data-caption="Single image">
-              <img src="/assets/img/galerry/img_4.png" />
+            <a
+              href="/assets/img/galerry/img_4.png"
+              data-fancybox
+              data-caption="Single image"
+            >
+              <img src="/assets/img/galerry/img_4.png" alt="photo" class="grid_photo" />
             </a>
           </div>
           <div class="grid_photo">
-            <a href="/assets/img/galerry/img_5.png" data-fancybox data-caption="Single image">
-              <img src="/assets/img/galerry/img_5.png" />
+            <a
+              href="/assets/img/galerry/img_5.png"
+              data-fancybox
+              data-caption="Single image"
+            >
+              <img src="/assets/img/galerry/img_5.png" alt="photo" class="grid_photo"/>
             </a>
           </div>
         </article>
-        <button class="button" id="addPhotoButton"><span>See more</span></button>
+        <button class="button" id="addPhotoButton">
+          <span>See more</span>
+        </button>
       </section>
       <section id="contact">
         <iframe
-        id="map"
+          id="map"
           class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96835.36811121418!2d-73.8663135278861!3d40.67164978373727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2z0JHRgNGD0LrQu9C40L0sINCd0YzRji3QmdC-0YDQuiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1721246916284!5m2!1sru!2sua"
           width="1600"
@@ -355,7 +392,11 @@
         </iframe>
         <form class="section">
           <div>
-            <img src="/assets/img/form_background.png" alt="background" class="backImg">
+            <img
+              src="/assets/img/form_background.png"
+              alt="background"
+              class="backImg"
+            />
           </div>
           <h2 class="title">Get in touch</h2>
           <article class="form_info">
@@ -407,8 +448,9 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#instagram"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="social_list__item">
               <a href="#" class="social_list__link"
@@ -416,8 +458,9 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#twitter"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="social_list__item">
               <a href="#" class="social_list__link"
@@ -425,8 +468,9 @@
                   <use
                     xlink:href="./assets/sprite/sprite.svg#facebook"
                     class="social__icon"
-                  ></use></svg>
-                </a>
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>

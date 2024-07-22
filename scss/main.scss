@@ -74,6 +74,7 @@ ul {
       }
     }
     .nav_list {
+      display: flex;
       &__item {
         position: relative;
         .nav_list__link::before {
@@ -97,6 +98,12 @@ ul {
       display: flex;
       flex-direction: row;
       gap: 20px;
+      &__item{
+        .social_list__item:hover svg{
+            fill: black;
+          
+        }
+      }
     }
   }
   .btn_down {
@@ -139,6 +146,7 @@ ul {
     display: flex;
     gap: 70px;
     &_img {
+      max-width: 630px;
       margin-top: 57px;
       position: relative;
       &::before {
@@ -248,6 +256,7 @@ ul {
       margin-bottom: 40px;
     }
     .backImg{
+      width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -262,6 +271,35 @@ ul {
       gap: 34px;
       & > span{
         @include font($main_font, 18px, 400, normal, start, $text_color);
+        position: relative;
+        &:first-of-type::before{
+          position: absolute;
+          content: url(/assets/img/contact_img/marker.png);
+          width: 20px;
+          height: 20px;
+          left: -20px;
+        }
+        &:nth-of-type(2)::before{
+          position: absolute;
+          content: url(/assets/img/contact_img/phone.png);
+          width: 20px;
+          height: 20px;
+          left: -20px;
+        }
+        &:nth-of-type(3)::before{
+          position: absolute;
+          content: url(/assets/img/contact_img/mail.png);
+          width: 20px;
+          height: 20px;
+          left: -20px;
+        }
+        &:last-of-type::before{
+          position: absolute;
+          content: url(/assets/img/contact_img/clock.png);
+          width: 20px;
+          height: 20px;
+          left: -20px;
+        }
       }
     }
     .form{
@@ -300,7 +338,7 @@ ul {
     }
   }
   .img{
-    height: auto;
+    height: 500px;
   }
   &_section{
     width: 770px;
